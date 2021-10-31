@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { MuiThemeProvider, StylesProvider } from "@material-ui/core";
+import { VFC } from "react";
+import { Provider } from "react-redux";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ComponentRouter } from "./router/ComponentRouter";
 
-export default App;
+import { store } from "./store/store";
+import { theme } from "./assets/style/theme";
+
+export const App: VFC = () => {
+    return (
+        <StylesProvider injectFirst>
+            <MuiThemeProvider theme={theme}>
+                <Provider store={store}>
+                    <ComponentRouter />
+                </Provider>
+            </MuiThemeProvider>
+        </StylesProvider>
+    );
+};
