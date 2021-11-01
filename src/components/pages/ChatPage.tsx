@@ -3,21 +3,20 @@ import styled from "styled-components";
 
 import { Header } from "../molucules/Header";
 import { InputArea } from "../molucules/InputArea";
+import { ChatList } from "../organisms/ChatList";
 
 export const ChatPage: VFC = () => {
     return (
         <SComponentContainer>
             <Header />
             <InputArea />
-            <div>chatPage</div>
+            <ChatList />
         </SComponentContainer>
     );
 };
 
 const SComponentContainer = styled.div`
     min-height: 100vh;
-
     text-align: center;
-    width: 100vw;
-    /* margin: 0 auto; */
+    background-color: #eee;
 `;

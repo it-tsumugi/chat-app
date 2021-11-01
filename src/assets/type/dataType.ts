@@ -1,1 +1,6 @@
-export const Type: any = 0;
+export type chatType = {
+    id: number;
+    user: string;
+    text: string;
+    time: string;
+};
