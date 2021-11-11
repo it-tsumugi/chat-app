@@ -9,7 +9,7 @@ https://it-tsumugi.github.io/chat-app/
 
 # 主な使用技術
 
-React,TypeScript,styled-components,firebase realtime database,react-infinite-scroller
+React,TypeScript,Redux,styled-components,firebase realtime database,react-infinite-scroller
 
 # 備考
 
