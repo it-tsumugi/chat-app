@@ -1,8 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { counterReducer } from "./slices/counter/counterSlice";
+
+import { chatDataReducer } from "./slices/chatDataSlice";
+import { isChatsCompletedReducer } from "./slices/isChatsCompletedSlice";
+import { hasMoreReducer } from "./slices/hasMoreSlice";
+import { latestChatOrderReducer } from "./slices/latestChatOrderSlice";
+import { lastChatOrderReducer } from "./slices/lastChatOrderSlice";
 
 export const store = configureStore({
-    reducer: {
-        counter: counterReducer,
-    },
+  reducer: {
+    chatData: chatDataReducer,
+    isChatsCompleted: isChatsCompletedReducer,
+    hasMore: hasMoreReducer,
+    latestChatOrder: latestChatOrderReducer,
+    lastChatOrder: lastChatOrderReducer,
+  },
 });
