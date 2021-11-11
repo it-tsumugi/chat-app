@@ -43,25 +43,29 @@ const SSubTitle = styled.h2`
 
   font-size: 22px;
   ${media.lg`
-    font-size: 20px;
+    font-size: 18px;
     `}
   ${media.md`
-    font-size: 18px;
+    font-size: 16px;
     `}
 `;
 
 const SButtonArea = styled.div`
+  display: grid;
+  grid-gap: 1px;
   position: absolute;
   top: 10px;
   right: 10px;
+  max-width: 100px;
+  ${media.md`
+    top: 2px;
+    right: 2px;
+  `}
 `;
 
 const SButton = styled.button`
   font-size: 12px;
-  ${media.lg`
+  ${media.lessThanlg`
     font-size: 10px;
-    `}
-  ${media.md`
-    font-size: 8px;
     `}
 `;

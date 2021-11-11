@@ -5,8 +5,6 @@ import { MAIN_COLOR } from "../../../assets/style/color";
 
 export const DefaultInput = styled.input`
   height: 30px;
-  width: 30vw;
-  padding-left: 20px;
   border-radius: 30px;
   border: 0;
   box-sizing: border-box;
@@ -22,4 +20,14 @@ export const DefaultInput = styled.input`
     font-size: 10px;
     `}
   }
+  width: 30vw;
+  padding-left: 20px;
+  ${media.lg`
+    padding-left: 15px;
+    width: 40vw;
+    `}
+  ${media.md`
+    padding-left: 7px;
+    width: 60vw;
+    `}
 `;
